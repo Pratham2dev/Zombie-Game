@@ -25,7 +25,7 @@ public class Zombie : MonoBehaviour
             {
                 anim.SetBool("Walk",false);
             }
-       
+       if(Vector3.Distance (Ninja.transform.position,this.transform.position)<10)
         agent.SetDestination(Ninja.transform.position- transform.forward);
         if(Vector3.Distance(this.transform.position,Ninja.transform.position)<2)
         {
