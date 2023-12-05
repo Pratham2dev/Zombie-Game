@@ -11,6 +11,9 @@ public class Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        foreach(var x in GetComponentsInChildren<Rigidbody>()){
+            x.isKinematic = true;
+        }
         agent=GetComponent<NavMeshAgent>();
         
     }
